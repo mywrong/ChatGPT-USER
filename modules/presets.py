@@ -48,25 +48,7 @@ CHUANHU_DESCRIPTION = i18n("")
 
 
 ONLINE_MODELS = [
-    "gpt-3.5-turbo",
-    "gpt-3.5-turbo-16k",
-    "gpt-3.5-turbo-0301",
-    "gpt-3.5-turbo-0613",
-    "gpt-4",
-    "gpt-4-0314",
-    "gpt-4-0613",
-    "gpt-4-32k",
-    "gpt-4-32k-0314",
-    "gpt-4-32k-0613",
-    "川虎助理",
-    "川虎助理 Pro",
-    "xmchat",
-    "yuanai-1.0-base_10B",
-    "yuanai-1.0-translate",
-    "yuanai-1.0-dialog",
-    "yuanai-1.0-rhythm_poems",
-    "minimax-abab4-chat",
-    "minimax-abab5-chat",
+    "gpt-3.5-turbo"
 ]
 
 LOCAL_MODELS = [
@@ -81,7 +63,7 @@ LOCAL_MODELS = [
     "llama-65b-hf",
 ]
 
-if os.environ.get('HIDE_LOCAL_MODELS', 'false') == 'true':
+if os.environ.get('HIDE_LOCAL_MODELS', 'true') == 'true':
     MODELS = ONLINE_MODELS
 else:
     MODELS = ONLINE_MODELS + LOCAL_MODELS
